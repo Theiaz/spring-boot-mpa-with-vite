@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="de" xmlns:th="http://www.thymeleaf.org">
+    <head th:fragment="common_header(titleSite)">
+        <title th:replace="${titleSite}?: _">Vite Spring Boot</title>
+        <link rel="stylesheet" th:href="@{/base/css/main.css}" />
+    </head>
+    <body th:fragment="common_body(content, scriptsApp)" >
+        <div th:replace="${content}"></div>
+
+        <th:block th:replace="${scriptsApp}?: _" />
+    </body>
+</html>
