@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head th:replace="layout::common_header(~{::title})">
+        <title>Main Page</title>
+    </head>
+    <body th:replace="layout::common_body(~{::main}, ~{::script})">
+        <main id="app"></main>
+        <script type="module" th:src="@{/main.js}"></script>
+    </body>
+</html>
