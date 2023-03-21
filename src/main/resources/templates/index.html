@@ -6,6 +6,8 @@
     <body th:replace="layout::common_body(~{::main}, ~{::script})">
         <main id="app"></main>
         <!--if debug-->
-        <script type="module" src="http://localhost:5173/src/main/js/pages/index.js"></script>
+        <script type="module" src="http://localhost:8081/src/main/js/pages/index.js"></script>
+        <!-- if prod -->
+        <script type="module" th:src="@{/main.js}"></script>
     </body>
 </html>

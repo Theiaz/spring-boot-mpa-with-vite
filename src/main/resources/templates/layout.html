@@ -2,9 +2,10 @@
 <html lang="de" xmlns:th="http://www.thymeleaf.org">
     <head th:fragment="common_header(titleSite)">
         <!--         if development -->
-        <script type="module" src="http://localhost:5173/@vite/client"></script>
+        <script type="module" src="http://localhost:8081/@vite/client"></script>
         <title th:replace="${titleSite}?: _">Vite Spring Boot</title>
-        <link rel="stylesheet" href="./../../css/index.css" />
+        <!-- if prod       -->
+        <link rel="stylesheet" th:href="@{/index.css}" />
     </head>
     <body th:fragment="common_body(content, scriptsApp)" >
         <header>

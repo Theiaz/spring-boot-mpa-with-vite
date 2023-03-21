@@ -3,5 +3,5 @@
 /*@import "node_modules/tailwindcss/utilities.css";*/
 
 body {
-    @apply bg-gray-100
+    @apply bg-green-500;
 }

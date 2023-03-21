@@ -3,24 +3,26 @@ import { resolve } from "path";
 import vue from "@vitejs/plugin-vue";
 
 export default defineConfig({
-    // appType: "custom",
-    // resolve: {
-    //     alias: {
-    //         "@": resolve(__dirname, "/src"),
-    //     },
-    // },
+    resolve: {
+        alias: {
+            "@": resolve(__dirname, "/src"),
+        },
+    },
     build:  {
         manifest: true,
         rollupOptions: {
             input: {
                 main: "./src/main/js/pages/index.js",
             },
-        //     output: {
-        //         entryFileNames: `[name].js`,
-        //         chunkFileNames: `[name].js`,
-        //         assetFileNames: `[name].[ext]`
-        //     }
+            output: {
+                entryFileNames: `[name].js`,
+                chunkFileNames: `[name].js`,
+                assetFileNames: `[name].[ext]`
+            }
         },
-        // outDir: `./src/main/resources/static/`,
+        outDir: `./src/main/resources/static/`,
     },
+    server: {
+        port: 8081,
+    }
 });
