@@ -25,5 +25,6 @@ export default defineConfig({
     },
     server: {
         port: 8081,
+        origin: 'http://localhost:8081', // generated asset URLs will be resolved using the back-end server URL instead of a relative path
     }
 });
