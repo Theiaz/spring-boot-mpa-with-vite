@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="de" xmlns:th="http://www.thymeleaf.org">
     <head th:fragment="common_header(titleSite)">
+        <!--         if development -->
+        <script type="module" src="http://localhost:5173/@vite/client"></script>
         <title th:replace="${titleSite}?: _">Vite Spring Boot</title>
-        <link rel="stylesheet" th:href="@{/index.css}" />
+        <link rel="stylesheet" href="./../../css/index.css" />
     </head>
     <body th:fragment="common_body(content, scriptsApp)" >
         <header>
             <div>Header</div>
-            <img th:src="@{/vite.svg}">
+            <img src="vite.svg">
         </header>
         <main th:replace="${content}"></main>
         <footer>Footer</footer>

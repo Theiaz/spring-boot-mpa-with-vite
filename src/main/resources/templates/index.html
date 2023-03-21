@@ -5,6 +5,7 @@
     </head>
     <body th:replace="layout::common_body(~{::main}, ~{::script})">
         <main id="app"></main>
-        <script type="module" th:src="@{/main.js}"></script>
+        <!--if debug-->
+        <script type="module" src="http://localhost:5173/src/main/js/pages/index.js"></script>
     </body>
 </html>
