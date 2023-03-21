@@ -12,4 +12,12 @@ Run `npm run build`
 
 Run `npm run dev`
 
-**Notice!** The dev-setup won't work. To reproduce the problem change `src/main/css/main.css` or `src/main/js/index.js`. Changes are not reflected immediatly.
+## Change environment
+
+In order to apply the right `<script/>` and `<style/>` sources, you need to apply either  `application.properties` or `application-dev.properties` file. 
+
+Create a local `application.properties` within `/src/main/resources/config` with the following value:
+
+```
+spring.profiles.include=dev # dont apply if you want prod mode
+```
